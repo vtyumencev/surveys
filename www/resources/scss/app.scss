@@ -1,0 +1,58 @@
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tinymce-editor ul,
+.tinymce-editor ol {
+    list-style: revert;
+    margin-left: 1.2rem;
+    padding: revert;
+}
+.tinymce-editor > ul,
+.tinymce-editor > ol {
+    padding: 0;
+}
+.tinymce-editor a {
+    text-decoration: underline;
+}
+.tinymce-editor ul,
+.tinymce-editor ol,
+.tinymce-editor p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.survey-blocks--builder-dragging .survey-block {
+    pointer-events: none;
+}
+
+.survey-block--fantom:before {
+    content: '';
+    display: block;
+    height: 3px;
+    border-radius: 50px;
+    width: 50%;
+    left: 25%;
+    top: -10px;
+    position: absolute;
+    background: rgba(76, 170, 0, 0.851);
+    animation: fantom-pulse 1s infinite;
+}
+.survey-block--fantom-after:before {
+    bottom: -10px;
+    top: auto;
+}
+
+@keyframes fantom-pulse {
+    0% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
